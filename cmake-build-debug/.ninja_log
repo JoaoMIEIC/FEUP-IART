@@ -1,0 +1,22 @@
+# ninja log v5
+53	970	6714079318083618	CMakeFiles/ProjIART.dir/graph.cpp.obj	59eb5aba12d7996d
+4	840	6713978823834372	CMakeFiles/ProjIART.dir/main.cpp.obj	66ea0b1102390809
+28	1319	6714088726758114	CMakeFiles/ProjIART.dir/street.cpp.obj	3de2fea2fbe73122
+841	1152	6713978826904731	ProjIART.exe	6e5823417a9f4123
+61	1415	6713974649103112	CMakeFiles/ProjIART.dir/files.cpp.obj	261526e93d28905e
+56	1322	6714088726788117	CMakeFiles/ProjIART.dir/car.cpp.obj	51f154a252531fce
+43	1328	6714088726818119	CMakeFiles/ProjIART.dir/evaluation.cpp.obj	a2915f76e948f7ac
+1	346	6714089026792556	build.ninja	f6c19de738dfdc0a
+3	797	6714089063957303	CMakeFiles/ProjIART.dir/intersection.cpp.obj	8e2098e543377556
+3	817	6714089278029478	CMakeFiles/ProjIART.dir/main.cpp.obj	66ea0b1102390809
+81	2009	6714096644638859	CMakeFiles/ProjIART.dir/graph.cpp.obj	59eb5aba12d7996d
+4	2185	6714096646339407	CMakeFiles/ProjIART.dir/evaluation.cpp.obj	a2915f76e948f7ac
+65	2192	6714096646359433	CMakeFiles/ProjIART.dir/car.cpp.obj	51f154a252531fce
+59	2227	6714096646719726	CMakeFiles/ProjIART.dir/intersection.cpp.obj	8e2098e543377556
+53	2229	6714096646689388	CMakeFiles/ProjIART.dir/street.cpp.obj	3de2fea2fbe73122
+72	2530	6714096649664773	CMakeFiles/ProjIART.dir/main.cpp.obj	66ea0b1102390809
+611	1833	6714744875292209	CMakeFiles/ProjIART.dir/intersection.cpp.obj	8e2098e543377556
+616	1839	6714744875332204	CMakeFiles/ProjIART.dir/evaluation.cpp.obj	a2915f76e948f7ac
+606	1840	6714744875342205	CMakeFiles/ProjIART.dir/street.cpp.obj	3de2fea2fbe73122
+4	1843	6714744875362212	CMakeFiles/ProjIART.dir/car.cpp.obj	51f154a252531fce
+620	1860	6714744875562192	CMakeFiles/ProjIART.dir/main.cpp.obj	66ea0b1102390809
