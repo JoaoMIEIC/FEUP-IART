@@ -1,3 +1,0 @@
-C:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/cmake-build-debug/CMakeFiles/ProjIART.dir
-C:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/cmake-build-debug/CMakeFiles/rebuild_cache.dir
