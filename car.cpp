@@ -1,12 +1,16 @@
 #include "graph.h"
 
-Car::Car(queue<Street*> path): totalTravelDist(0), totalTimeWaiting(0), distTilIntersection(0), path( move(path) ){};
-
+Car::Car(): totalTravelDist(0), totalTimeWaiting(0), distTilIntersection(0){}
 
 void Car::advance() {
+    if (this->getPath().empty()) return;
+
     if (distTilIntersection > 0) {
         distTilIntersection--;
-        if (distTilIntersection == 0) this->path.front()->addToQueue(this);
+        if (distTilIntersection == 0) {
+            if(this->getPath().size() > 1) this->path.front()->addToQueue(this);
+            else this->popStreet();
+        }
         this->increaseTravelDist();
     } else 
         this->increaseTimeWaiting();
@@ -20,6 +24,13 @@ void Car::increaseTimeWaiting() {
     this->totalTimeWaiting++;
 }
 
+void Car::decreaseTimeWaiting() {
+    this->totalTimeWaiting--;
+}
+
+void Car::addStreet(Street * street){
+    this->path.push(street);
+}
 int Car::getTotalTravelDist(){
     return this->totalTravelDist;
 }
@@ -37,8 +48,8 @@ queue<Street*> Car::getPath() {
 }
 
 void Car::popStreet() {
-    if (this->path.empty()) return;
 
     this->path.pop();
+    if (this->path.empty()) return;
     distTilIntersection = this->path.front()->getLength();
 }

@@ -5,6 +5,7 @@ using namespace std;
 #include <string>
 #include <queue>
 #include <algorithm>
+#include <vector>
 #include <fstream>
 
 

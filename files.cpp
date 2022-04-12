@@ -6,33 +6,32 @@ void readInput(Simulation &simulation, vector<Street> &streets, vector<Car> &car
 
     // Creates nIntersections empty intersections
     intersections.resize(simulation.nIntersections);
+    cars.resize(simulation.nCars);
 
     // Reads and creates streets
     int initial, final, duration;
     string name;
     for (int i = 0; i < simulation.nStreets; i++) {
         file >> initial >> final >> name >> duration;
-        streets.emplace_back(initial, final, name, duration);
+        streets.emplace_back(initial, final, name, duration,intersections);
+        streets[i].getFinalIntersection()->setTimeLeft(streets[i].getDuration());
+
     }
 
     // Adds streets to their final intersection
-    for (int i = 0; i < streets.size(); i++)
-        streets[i].getFinalIntersection()->addStreet(&streets[i]);
-
+    for (int i = 0; i < streets.size(); i++) streets[i].getFinalIntersection()->addStreet(&streets[i]);
 
     // Reads and creates cars
     int carPathLength;
     string streetName;
+    queue<Street*> streetNames;
+
     for (int i = 0; i < simulation.nCars; i++) {
         file >> carPathLength;
-
-        queue<Street*> streetNames;
         for (int j = 0; j < carPathLength; j++) {
             file >> streetName;
-            streetNames.push(&*find(begin(streets), end(streets), new Street(streetName)));
+            cars[i].addStreet(&*find(begin(streets), end(streets), new Street(streetName)));
         }
-
-        cars.emplace_back(streetNames);
         cars[i].getPath().front()->addToQueue(&cars[i]);
     }
 

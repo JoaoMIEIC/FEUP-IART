@@ -37,6 +37,7 @@ class Intersection {
 
 public:
     void addStreet(Street* s);
+    void setTimeLeft(int timeLeft);
     vector<Street*> getTrafficSchedule() const;
     void moveCar();
 };
@@ -48,7 +49,7 @@ class Car {
     queue<Street*> path;
 
 public:
-    explicit Car(queue<Street*> path);
+    explicit Car();
     void popStreet();
     void advance();
     queue<Street*> getPath();
@@ -56,6 +57,7 @@ public:
     int getTotalTimeWaiting();
     int getDistTilIntersection();
 
+    void addStreet(Street * street);
     void increaseTravelDist();
     void increaseTimeWaiting();
     void decreaseTimeWaiting();

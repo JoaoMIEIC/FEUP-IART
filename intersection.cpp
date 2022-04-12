@@ -13,6 +13,10 @@ void Intersection::moveCar(){
     }
 }
 
+void Intersection::setTimeLeft(int timeLeft) {
+    this->timeLeft = timeLeft;
+}
+
 vector<Street*> Intersection::getTrafficSchedule() const{
     return this->trafficSchedule;
 }

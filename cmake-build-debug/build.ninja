@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target ProjIART
 
@@ -49,43 +49,37 @@ cmake_ninja_workdir = C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/c
 
 build cmake_object_order_depends_target_ProjIART: phony || CMakeFiles/ProjIART.dir
 
-build CMakeFiles/ProjIART.dir/main.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/main.cpp || cmake_object_order_depends_target_ProjIART
+build CMakeFiles/ProjIART.dir/main.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/main.cpp || cmake_object_order_depends_target_ProjIART
   DEP_FILE = CMakeFiles\ProjIART.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ProjIART.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjIART.dir
 
-build CMakeFiles/ProjIART.dir/files.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/files.cpp || cmake_object_order_depends_target_ProjIART
+build CMakeFiles/ProjIART.dir/files.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/files.cpp || cmake_object_order_depends_target_ProjIART
   DEP_FILE = CMakeFiles\ProjIART.dir\files.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ProjIART.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjIART.dir
 
-build CMakeFiles/ProjIART.dir/graph.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/graph.cpp || cmake_object_order_depends_target_ProjIART
-  DEP_FILE = CMakeFiles\ProjIART.dir\graph.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\ProjIART.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProjIART.dir
-
-build CMakeFiles/ProjIART.dir/street.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/street.cpp || cmake_object_order_depends_target_ProjIART
+build CMakeFiles/ProjIART.dir/street.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/street.cpp || cmake_object_order_depends_target_ProjIART
   DEP_FILE = CMakeFiles\ProjIART.dir\street.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ProjIART.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjIART.dir
 
-build CMakeFiles/ProjIART.dir/car.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/car.cpp || cmake_object_order_depends_target_ProjIART
+build CMakeFiles/ProjIART.dir/car.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/car.cpp || cmake_object_order_depends_target_ProjIART
   DEP_FILE = CMakeFiles\ProjIART.dir\car.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ProjIART.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjIART.dir
 
-build CMakeFiles/ProjIART.dir/intersection.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/intersection.cpp || cmake_object_order_depends_target_ProjIART
+build CMakeFiles/ProjIART.dir/intersection.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/intersection.cpp || cmake_object_order_depends_target_ProjIART
   DEP_FILE = CMakeFiles\ProjIART.dir\intersection.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ProjIART.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjIART.dir
 
-build CMakeFiles/ProjIART.dir/evaluation.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/evaluation.cpp || cmake_object_order_depends_target_ProjIART
+build CMakeFiles/ProjIART.dir/evaluation.cpp.obj: CXX_COMPILER__ProjIART_Debug C$:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/evaluation.cpp || cmake_object_order_depends_target_ProjIART
   DEP_FILE = CMakeFiles\ProjIART.dir\evaluation.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ProjIART.dir
@@ -99,7 +93,7 @@ build CMakeFiles/ProjIART.dir/evaluation.cpp.obj: CXX_COMPILER__ProjIART_Debug C
 #############################################
 # Link the executable ProjIART.exe
 
-build ProjIART.exe: CXX_EXECUTABLE_LINKER__ProjIART_Debug CMakeFiles/ProjIART.dir/main.cpp.obj CMakeFiles/ProjIART.dir/files.cpp.obj CMakeFiles/ProjIART.dir/graph.cpp.obj CMakeFiles/ProjIART.dir/street.cpp.obj CMakeFiles/ProjIART.dir/car.cpp.obj CMakeFiles/ProjIART.dir/intersection.cpp.obj CMakeFiles/ProjIART.dir/evaluation.cpp.obj
+build ProjIART.exe: CXX_EXECUTABLE_LINKER__ProjIART_Debug CMakeFiles/ProjIART.dir/main.cpp.obj CMakeFiles/ProjIART.dir/files.cpp.obj CMakeFiles/ProjIART.dir/street.cpp.obj CMakeFiles/ProjIART.dir/car.cpp.obj CMakeFiles/ProjIART.dir/intersection.cpp.obj CMakeFiles/ProjIART.dir/evaluation.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ProjIART.dir
@@ -114,7 +108,7 @@ build ProjIART.exe: CXX_EXECUTABLE_LINKER__ProjIART_Debug CMakeFiles/ProjIART.di
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\ProjIART\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\PROJ-IART\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -125,7 +119,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\ProjIART\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\ProjIART -BC:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\ProjIART\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\PROJ-IART\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\PROJ-IART -BC:\Users\ASUS\Desktop\FEUP\3ano\2Semestre\IART\PROJ-IART\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -143,7 +137,7 @@ build ProjIART: phony ProjIART.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/ProjIART/cmake-build-debug
+# Folder: C:/Users/ASUS/Desktop/FEUP/3ano/2Semestre/IART/PROJ-IART/cmake-build-debug
 
 build all: phony ProjIART.exe
 
