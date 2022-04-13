@@ -47,6 +47,7 @@ class Car {
     int totalTimeWaiting;
     int distTilIntersection;
     queue<Street*> path;
+    bool recentlyInQueue;
 
 public:
     explicit Car();
@@ -56,6 +57,8 @@ public:
     int getTotalTravelDist();
     int getTotalTimeWaiting();
     int getDistTilIntersection();
+    bool isRecentlyInQueue();
+    bool setRecentlyInQueue(bool value);
 
     void addStreet(Street * street);
     void increaseTravelDist();

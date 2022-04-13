@@ -27,7 +27,12 @@ void Street::popCar(){
     if (this->waitingCars.empty()) return;
 
     Car* firstCar = this->waitingCars.front();
-    firstCar->increaseTravelDist();
+    if (this->waitingCars.front()->isRecentlyInQueue()){
+        firstCar->setRecentlyInQueue(false);
+        return;
+    }
+
+    // firstCar->increaseTravelDist(); // atravessar não custa tempo alegadamente
     firstCar->decreaseTimeWaiting(); // previous increase turned out to not exist
     firstCar->popStreet();
     this->waitingCars.pop();

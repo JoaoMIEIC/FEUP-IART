@@ -1,6 +1,6 @@
 #include "graph.h"
 
-Car::Car(): totalTravelDist(0), totalTimeWaiting(0), distTilIntersection(0){}
+Car::Car(): totalTravelDist(0), totalTimeWaiting(0), distTilIntersection(0), recentlyInQueue(false){}
 
 void Car::advance() {
     if (this->getPath().empty()) return;
@@ -8,12 +8,18 @@ void Car::advance() {
     if (distTilIntersection > 0) {
         distTilIntersection--;
         if (distTilIntersection == 0) {
-            if(this->getPath().size() > 1) this->path.front()->addToQueue(this);
+            if(this->getPath().size() > 1) {
+                this->path.front()->addToQueue(this);
+                this->recentlyInQueue = true;
+            }
             else this->popStreet();
         }
         this->increaseTravelDist();
-    } else 
+    } else{
         this->increaseTimeWaiting();
+        if (this->recentlyInQueue == true) this->recentlyInQueue = false;
+    }
+
 }
 
 void Car::increaseTravelDist() {
@@ -26,6 +32,14 @@ void Car::increaseTimeWaiting() {
 
 void Car::decreaseTimeWaiting() {
     this->totalTimeWaiting--;
+}
+
+bool Car::isRecentlyInQueue(){
+    return this->recentlyInQueue;
+}
+
+bool Car::setRecentlyInQueue(bool value){
+    this->recentlyInQueue = value;
 }
 
 void Car::addStreet(Street * street){
@@ -52,4 +66,5 @@ void Car::popStreet() {
     this->path.pop();
     if (this->path.empty()) return;
     distTilIntersection = this->path.front()->getLength();
+    this->advance();
 }
