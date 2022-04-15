@@ -3,4 +3,4 @@ project(ProjIART)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ProjIART main.cpp files.cpp street.cpp car.cpp intersection.cpp evaluation.cpp)
+add_executable(ProjIART main.cpp files.cpp street.cpp car.cpp intersection.cpp evaluation.cpp hillClimbing.cpp hillClimbing.h)

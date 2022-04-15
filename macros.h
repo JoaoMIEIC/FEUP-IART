@@ -7,7 +7,8 @@ using namespace std;
 #include <algorithm>
 #include <vector>
 #include <fstream>
-
+#include <cstdlib>
+#include <ctime>
 
 struct Simulation{
     int duration, nIntersections, nStreets, nCars, score;

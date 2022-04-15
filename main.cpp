@@ -8,7 +8,7 @@ vector<Car> cars;
 vector<Intersection> intersections;
 
 int main() {
-    readInput(simulation, streets, cars, intersections);
+    /*readInput(simulation, streets, cars, intersections);
 
     for (int i = 0; i < simulation.duration; i++){
         cout << "Ola" << endl;
@@ -24,7 +24,10 @@ int main() {
     
     cout << evaluateFinishedWithTime(cars,simulation.duration);
         
-    writeOutput(intersections);
+    writeOutput(intersections);*/
+    srand((unsigned) time(0));
+    int randomNumber = rand() % 2 + 1;
+    cout << randomNumber << endl;
     return 0;
 }
 
