@@ -9,6 +9,7 @@ using namespace std;
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 
 struct Simulation{
     int duration, nIntersections, nStreets, nCars, score;

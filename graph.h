@@ -26,7 +26,10 @@ public:
 
     int getDuration() const;
     void setDuration(int duration);
+    void changeDuration(int duration);
     Car* getFront() const;
+
+    void clearQueue();
 
     bool operator==(const Street* s) const;
 };
@@ -40,6 +43,10 @@ public:
     void setTimeLeft(int timeLeft);
     vector<Street*> getTrafficSchedule() const;
     void moveCar();
+
+    void changeSchedules(int funcType);
+    void shuffleOrder();
+    void clearStreets();
 };
 
 class Car {
@@ -50,7 +57,7 @@ class Car {
     bool recentlyInQueue;
 
 public:
-    explicit Car();
+    Car();
     void popStreet();
     void advance();
     queue<Street*> getPath();
@@ -58,12 +65,15 @@ public:
     int getTotalTimeWaiting();
     int getDistTilIntersection();
     bool isRecentlyInQueue();
-    bool setRecentlyInQueue(bool value);
+    void setRecentlyInQueue(bool value);
 
     void addStreet(Street * street);
+    Street* removeStreet();
     void increaseTravelDist();
     void increaseTimeWaiting();
     void decreaseTimeWaiting();
+
+
 };
 
 

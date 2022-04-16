@@ -62,3 +62,14 @@ void Street::setFinalIntersection(Intersection* finalIntersection){
 void Street::setDuration(int duration){
     this->duration = duration;
 }
+
+void Street::changeDuration(int duration){
+    this->duration += duration;
+    if (duration < 0) duration = 0;
+}
+
+void Street::clearQueue(){
+    while (!waitingCars.empty()){
+        waitingCars.pop();
+    }
+}

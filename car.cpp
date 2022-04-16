@@ -38,7 +38,7 @@ bool Car::isRecentlyInQueue(){
     return this->recentlyInQueue;
 }
 
-bool Car::setRecentlyInQueue(bool value){
+void Car::setRecentlyInQueue(bool value){
     this->recentlyInQueue = value;
 }
 
@@ -59,6 +59,12 @@ int Car::getDistTilIntersection(){
 
 queue<Street*> Car::getPath() {
     return this->path;
+}
+
+Street* Car::removeStreet() {
+    Street* street = this->path.front();
+    this->path.pop();
+    return street;
 }
 
 void Car::popStreet() {

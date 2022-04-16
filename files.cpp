@@ -32,7 +32,6 @@ void readInput(Simulation &simulation, vector<Street> &streets, vector<Car> &car
             file >> streetName;
             cars[i].addStreet(&*find(begin(streets), end(streets), new Street(streetName)));
         }
-        cars[i].getPath().front()->addToQueue(&cars[i]);
     }
 
     file.close();
