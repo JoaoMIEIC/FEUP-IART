@@ -1,3 +1,5 @@
+#include <iomanip>
+#include <map>
 #include "genetic.h"
 
 void Solution::crossover(const Solution& parent1, const Solution& parent2){
@@ -7,25 +9,24 @@ void Solution::crossover(const Solution& parent1, const Solution& parent2){
     }
 }
 
+random_device rd;
+mt19937 gen(rd());
+negative_binomial_distribution<> randomNSeconds(5, 0.75);
+
 void Solution::mutation(){
-    random_device rd;
-    default_random_engine generator(rd());
-    uniform_int_distribution<int> randomNMutations(1, 4);
-    uniform_int_distribution<int> randomIntersection(0, intersections.size()-1);
+    srand(time(nullptr));
 
-    // For example, suppose an ordinary dice is thrown repeatedly until the first time a "1" appears.
-    // The probability distribution of the number of times it is thrown is supported
-    // on the infinite set { 1, 2, 3, ... } and is a geometric distribution with p = 1/6.
-    geometric_distribution<int> randomNSeconds(0.3 /*macro definable*/);
-
-    for (int i = randomNMutations(generator); i != 0; i--){
-
-        int nStreets = intersections[randomIntersection(generator)].getTrafficSchedule().size();
-        uniform_int_distribution<int> randomStreet(0, nStreets-1);
-
-        intersections[randomIntersection(generator)].changeStreetSchedule(randomStreet(generator), randomNSeconds(generator));
-
+    for (int nMutations = rand() % 4 + 1; nMutations != 0; nMutations--){
+        int intersectionIndex = rand() % intersections.size();
+        int streetIndex = rand() % intersections[intersectionIndex].getTrafficSchedule().size();
+        intersections[intersectionIndex].changeStreetSchedule(streetIndex, randomNSeconds(gen));
     }
+
+    for (int i = 0; i < intersections.size(); i++)
+        if (!intersections[i].changeLog.empty())
+            changeLog += "At index " + to_string(i) + ", " + intersections[i].changeLog;
+
+    return;
 }
 
 void Solution::evaluate(vector<Car> &cars, int duration){
@@ -33,6 +34,7 @@ void Solution::evaluate(vector<Car> &cars, int duration){
 }
 
 Solution* rouletteSelection(vector<Solution> &solutionPool){
+    // TODO: check if randoms are working (prob arent)
     int totalScore = 0;
     for (auto solution : solutionPool)
         totalScore += solution.getFitnessValue();

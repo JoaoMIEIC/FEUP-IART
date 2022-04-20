@@ -6,6 +6,7 @@
 
 class Solution {
     int fitnessValue;
+    string changeLog = "";
 public:
     vector<Intersection> intersections;
     Solution(vector<Intersection> &intersections): intersections(intersections) {}
