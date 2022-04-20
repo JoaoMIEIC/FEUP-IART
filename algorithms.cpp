@@ -2,8 +2,11 @@
 
 
 void applyNeighborhoodFunc(Intersection* intersection){
-    srand((unsigned) time(0));
-    int neighborhoodFunc = rand() % 3;
+    random_device rd;
+    default_random_engine generator(rd());
+    uniform_int_distribution<int> randomInt(0, 2);
+
+    int neighborhoodFunc = randomInt(generator);
     switch(neighborhoodFunc) {
         case (0):
             intersection->changeSchedules(1);
@@ -32,7 +35,7 @@ void hillClimbing(vector<Car> &cars, vector<Intersection> & intersections, int d
     }
 }
 
-float coolingStructure(float temperature, int counter){
+double coolingStructure(double temperature, int counter){
     return temperature* pow(0.9, counter);
 }
 
@@ -49,15 +52,19 @@ void revertDurations(vector<int> &durations, Intersection* intersection){
 }
 
 void simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections, int duration){
-    srand((unsigned) time(0));
     int counter = 0;
     int bestSolutionCost = evaluateSolution(cars, intersections, duration, 0);
 
-    float temperature = 50* cars.size();
+    double temperature = 50 * cars.size();
+
+    random_device rd;
+    default_random_engine generator(rd());
+    uniform_int_distribution<int> randomInt (0, intersections.size() - 1);
+    uniform_real_distribution<double> randomDouble(0, 1);
 
     while(counter < 100000) {
         temperature = coolingStructure(temperature, counter);
-        int randInter = rand() % intersections.size();
+        int randInter = randomInt(generator);
 
         vector<int> streetDurations;
         storeDurations(streetDurations, &intersections[randInter]);
@@ -67,8 +74,10 @@ void simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections,
         cout << "i: " << counter << " " << newSolutionCost << endl;
         int difference = newSolutionCost - bestSolutionCost;
 
-        if (difference <= 0 && rand() % 1 > pow(exp(1), difference/temperature))
+        if (difference <= 0 && randomDouble(generator) > pow(exp(1), difference/temperature)){
             revertDurations(streetDurations, &intersections[randInter]);
+            cout << "This happened!!" << endl;
+        }
 
         else if (difference > temperature) temperature /= 2; //todo change later
         counter++;

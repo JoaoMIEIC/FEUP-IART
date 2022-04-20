@@ -5,10 +5,13 @@ void readInput(Simulation &simulation, vector<Street> &streets, vector<Car> &car
     file >> simulation.duration >> simulation.nIntersections >> simulation.nStreets >> simulation.nCars >> simulation.score;
 
     // Creates nIntersections empty intersections
+    cout << simulation.nIntersections << " intersections created" << endl;
     intersections.resize(simulation.nIntersections);
+    cout << simulation.nCars << " base cars created" << endl;
     cars.resize(simulation.nCars);
 
     // Reads and creates streets
+    cout << simulation.nStreets << " streets created" << endl;
     int initial, final, duration;
     string name;
     for (int i = 0; i < simulation.nStreets; i++) {
@@ -19,9 +22,11 @@ void readInput(Simulation &simulation, vector<Street> &streets, vector<Car> &car
     }
 
     // Adds streets to their final intersection
+    cout << streets.size() << " streets added to their final intersection" << endl;
     for (int i = 0; i < streets.size(); i++) streets[i].getFinalIntersection()->addStreet(&streets[i]);
 
     // Reads and creates cars
+    cout << simulation.nCars << " cars created" << endl;
     int carPathLength;
     string streetName;
     queue<Street*> streetNames;
@@ -33,7 +38,7 @@ void readInput(Simulation &simulation, vector<Street> &streets, vector<Car> &car
             cars[i].addStreet(&*find(begin(streets), end(streets), new Street(streetName)));
         }
     }
-
+    cout << "Input reading finished..." << endl;
     file.close();
 }
 

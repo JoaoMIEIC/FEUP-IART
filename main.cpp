@@ -1,5 +1,6 @@
 #include "files.h"
 #include "algorithms.h"
+#include "genetic.h"
 
 Simulation simulation;
 vector<Street> streets;
@@ -7,9 +8,10 @@ vector<Car> cars;
 vector<Intersection> intersections;
 
 int main() {
+    cout << "Input reading starting..." << endl;
     readInput(simulation, streets, cars, intersections);
 
-    simulatedAnnealing(cars, intersections, simulation.duration);
+    genetic(cars, intersections, simulation.duration);
         
     //writeOutput(intersections);
 
