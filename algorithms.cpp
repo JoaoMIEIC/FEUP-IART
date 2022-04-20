@@ -48,14 +48,14 @@ void revertDurations(vector<int> &durations, Intersection* intersection){
         tmp[i]->setDuration(durations[i]);
 }
 
-void simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections, int duration){
+void simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections, int duration, int iterations){
     srand((unsigned) time(0));
     int counter = 0;
     int bestSolutionCost = evaluateSolution(cars, intersections, duration, 0);
 
     float temperature = 50* cars.size();
 
-    while(counter < 100000) {
+    while(counter < iterations) {
         temperature = coolingStructure(temperature, counter);
         int randInter = rand() % intersections.size();
 
