@@ -45,8 +45,10 @@ public:
     void moveCar();
 
     void changeSchedules(int funcType);
+    void changeStreetSchedule(int streetIndex, int duration);
     void shuffleOrder();
     void clearStreets();
+    void removeIncomingStreets();
 };
 
 class Car {

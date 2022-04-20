@@ -30,7 +30,7 @@ void clearStreets(vector<Intersection> &intersections){
         intersections[i].clearStreets();
 }
 
-
+// Cars has no & on purpose
 int evaluateWithTime(vector<Car> cars, vector<Intersection> &intersections, int duration){
     simulate(cars, intersections, duration);
 
@@ -46,6 +46,7 @@ int evaluateWithTime(vector<Car> cars, vector<Intersection> &intersections, int 
     return score;
 }
 
+// Cars has no & on purpose
 int evaluateWithPercentage(vector<Car> cars, vector<Intersection> &intersections, int duration){
     simulate(cars, intersections, duration);
 

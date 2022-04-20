@@ -15,7 +15,7 @@ void Intersection::moveCar(){
     }
 }
 
-void Intersection::setTimeLeft(int timeLeft){
+void Intersection::setTimeLeft(int timeLeft) {
     this->timeLeft = timeLeft;
 }
 
@@ -28,14 +28,27 @@ void Intersection::clearStreets(){
         trafficSchedule[i]->clearQueue();
 }
 
+void Intersection::removeIncomingStreets(){
+    this->trafficSchedule.clear();
+}
+
 void Intersection::changeSchedules(int funcType){
     srand((unsigned) time(0));
 
     int choiceTrafficLight = (rand() % trafficSchedule.size());
+
+    random_device rd;
+    default_random_engine generator(rd());
+    geometric_distribution<int> randomNSeconds(0.3 /*macro definable*/);
+
     trafficSchedule[choiceTrafficLight]->changeDuration(funcType);
 }
 
 void Intersection::shuffleOrder() {
     srand((unsigned) time(0));
     shuffle(trafficSchedule.begin(), trafficSchedule.end(), std::mt19937(std::random_device()()));
+}
+
+void Intersection::changeStreetSchedule(int streetIndex, int duration){
+    trafficSchedule[streetIndex]->setDuration(duration);
 }

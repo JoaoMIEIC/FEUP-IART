@@ -9,7 +9,8 @@ vector<Intersection> intersections;
 int main() {
     readInput(simulation, streets, cars, intersections);
 
-    simulatedAnnealing(cars, intersections, simulation.duration, 10000);
+    //simulatedAnnealing(cars, intersections, simulation.duration, 10000);
+    hillClimbing(cars, intersections, simulation.duration, 10);
 
     //writeOutput(intersections);
 

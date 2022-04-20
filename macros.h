@@ -10,6 +10,7 @@ using namespace std;
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
+#include <random>
 
 struct Simulation{
     int duration, nIntersections, nStreets, nCars, score;
