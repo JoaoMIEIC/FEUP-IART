@@ -47,4 +47,5 @@ void Intersection::shuffleOrder() {
 
 void Intersection::changeStreetSchedule(int streetIndex, int duration){
     trafficSchedule[streetIndex]->setDuration(duration);
+    changeLog += "Street " + to_string(streetIndex) + " set to " + to_string(duration) + " \n";
 }

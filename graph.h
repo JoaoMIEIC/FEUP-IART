@@ -37,8 +37,8 @@ public:
 class Intersection {
     int currentStreet, timeLeft;
     vector<Street*> trafficSchedule;
-
 public:
+    string changeLog = "";
     void addStreet(Street* s);
     void setTimeLeft(int timeLeft);
     vector<Street*> getTrafficSchedule() const;
