@@ -15,7 +15,7 @@ void Intersection::moveCar(){
     }
 }
 
-void Intersection::setTimeLeft(int timeLeft){
+void Intersection::setTimeLeft(int timeLeft) {
     this->timeLeft = timeLeft;
 }
 
@@ -32,6 +32,10 @@ void Intersection::clearStreets(){
 
 void Intersection::setCurrentStreet(int index) {
     currentStreet = index;
+}
+
+void Intersection::removeIncomingStreets(){
+    this->trafficSchedule.clear();
 }
 
 void Intersection::changeSchedules(int funcType){

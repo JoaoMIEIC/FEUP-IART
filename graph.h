@@ -48,6 +48,7 @@ public:
     void shuffleOrder();
     void clearStreets();
     void setCurrentStreet(int index);
+    void removeIncomingStreets();
 };
 
 class Car {
