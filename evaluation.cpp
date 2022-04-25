@@ -1,8 +1,8 @@
 #include "evaluation.h"
 
 
-
-int evaluateSolution(vector<Car> &cars, vector<Intersection> &intersections, int duration, int mode){
+// Cars has no & on purpose
+int evaluateSolution(vector<Car> cars, vector<Intersection> &intersections, int duration, int mode){
     switch (mode) {
         case (0):
             return evaluateWithTime(cars, intersections, duration);
@@ -30,15 +30,14 @@ void clearStreets(vector<Intersection> &intersections){
         intersections[i].clearStreets();
 }
 
-// Cars has no & on purpose
-int evaluateWithTime(vector<Car> cars, vector<Intersection> &intersections, int duration){
+int evaluateWithTime(vector<Car> &cars, vector<Intersection> &intersections, int duration){
     simulate(cars, intersections, duration);
 
     int score = 0;
-    for (int i = 0; i < cars.size(); i++) {
-        if (cars[i].getPath().empty()) {
+    for (auto & car : cars) {
+        if (car.getPath().empty()) {
             score += 100;
-            score += 10*(duration - (cars[i].getTotalTimeWaiting() + cars[i].getTotalTravelDist()));
+            score += 10*(duration - (car.getTotalTimeWaiting() + car.getTotalTravelDist()));
         }
     }
 
@@ -46,8 +45,7 @@ int evaluateWithTime(vector<Car> cars, vector<Intersection> &intersections, int 
     return score;
 }
 
-// Cars has no & on purpose
-int evaluateWithPercentage(vector<Car> cars, vector<Intersection> &intersections, int duration){
+int evaluateWithPercentage(vector<Car> &cars, vector<Intersection> &intersections, int duration){
     simulate(cars, intersections, duration);
 
     int score = 0;
