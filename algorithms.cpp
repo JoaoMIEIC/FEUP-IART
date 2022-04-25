@@ -25,9 +25,12 @@ void applyNeighborhoodFunc(Intersection* intersection, int rnd){
             break;
     }
 }
-void hillClimbing(vector<Car> &cars, vector<Intersection> & intersections, int duration, int iterations){
+vector<pair<Street*, int>> hillClimbing(vector<Car> &cars, vector<Intersection> & intersections, int duration, int iterations){
     int bestSolutionCost = evaluateSolution(cars, intersections, duration, 0);
     int counter = 0;
+
+    vector<pair<Street*, int>> solutions;
+    storeSolutions(solutions, intersections);
 
     while(counter < iterations){
         for (int i = 0; i < intersections.size(); i++){
@@ -39,13 +42,17 @@ void hillClimbing(vector<Car> &cars, vector<Intersection> & intersections, int d
                 int newSolutionCost = evaluateSolution(cars, intersections, duration, 0);
                 cout << "i(" << j << "): " << i << " " << newSolutionCost << " " << bestSolutionCost << endl;
                 if(newSolutionCost < bestSolutionCost) revertDurations(streetDurations, &intersections[i]);
-                else bestSolutionCost = newSolutionCost;
-
+                else {
+                    bestSolutionCost = newSolutionCost;
+                    solutions.clear();
+                    storeSolutions(solutions, intersections);
+                }
             }
         }
-
         counter++;
     }
+
+    return solutions;
 }
 
 double coolingStructure(double temperature, int counter){
@@ -56,9 +63,19 @@ void storeDurations(vector<pair<Street*, int>> &durations, Intersection* interse
     vector<Street*> tmp = intersection->getTrafficSchedule();
     for (int i = 0; i < tmp.size(); i++)
         durations.push_back(make_pair(tmp[i], tmp[i]->getDuration()));
+}
 
+void storeSolutions(vector<pair<Street*, int>> &durations, vector<Intersection> &intersections){
+    for (int j = 0; j < intersections.size(); j++){
+        vector<Street*> tmp = intersections[j].getTrafficSchedule();
+        for (int i = 0; i < tmp.size(); i++)
+            durations.push_back(make_pair(tmp[i], tmp[i]->getDuration()));
+    }
+}
 
-
+void getBestResult(vector<pair<Street*, int>> &durations){
+    for (int i = 0; i < durations.size(); i++)
+        durations[i].first->setDuration(durations[i].second);
 }
 
 void revertDurations(vector<pair<Street*, int>> &durations, Intersection* intersection){
@@ -70,9 +87,12 @@ void revertDurations(vector<pair<Street*, int>> &durations, Intersection* inters
 
 }
 
-void simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections, int duration, int iterations){
+vector<pair<Street*, int>> simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections, int duration, int iterations){
     int counter = 0;
     int bestSolutionCost = evaluateSolution(cars, intersections, duration, 0);
+
+    vector<pair<Street*, int>> solutions;
+    storeSolutions(solutions, intersections);
 
     double temperature = 10 * cars.size();
 
@@ -99,9 +119,15 @@ void simulatedAnnealing(vector<Car> &cars, vector<Intersection> & intersections,
             revertDurations(streetDurations, &intersections[randInter]);
             //cout << "This happened!!" << endl;
         }
-        else  bestSolutionCost = newSolutionCost;
+        else{
+            bestSolutionCost = newSolutionCost;
+            solutions.clear();
+            storeSolutions(solutions, intersections);
+        }
         counter++;
     }
+
+    return solutions;
 }
 
 

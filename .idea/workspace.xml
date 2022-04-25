@@ -25,21 +25,16 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="096d92c9-89b5-42fd-8e5d-7c8ea16f4b56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/genetic.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/genetic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithms.h" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/evaluation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/files.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intersection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/intersection.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macros.h" beforeDir="false" afterPath="$PROJECT_DIR$/macros.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +48,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/intersection.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/files.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/algorithms.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/evaluation.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/algorithms.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/cmake-build-debug/input2.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/evaluation.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/car.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/street.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="283Sn3tg53HqgcrNlZVPB3tq1xX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -68,14 +78,14 @@
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration name="ProjIART" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjIART" TARGET_NAME="ProjIART" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjIART" RUN_TARGET_NAME="ProjIART">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjIART" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjIART" TARGET_NAME="ProjIART" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjIART" RUN_TARGET_NAME="ProjIART">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -105,53 +115,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1650466888191">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650466888191" />
-    <state width="1493" height="260" key="GridCell.Tab.0.center" timestamp="1650466888191">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1650466888191" />
-    <state width="1493" height="260" key="GridCell.Tab.0.left" timestamp="1650466888191">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1650466888191" />
-    <state width="1493" height="260" key="GridCell.Tab.0.right" timestamp="1650466888191">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1650466888191" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1650465949250">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1650465949250" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1650465949250">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1650465949250" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1650465949250">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1650465949250" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1650465949250">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1650465949250" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1650444927485">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1650444927485" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1650444927493">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1650444927493" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1650465833832">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1650465833832" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -163,7 +126,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/algorithms.cpp</url>
-          <line>66</line>
+          <line>83</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

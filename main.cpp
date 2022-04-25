@@ -9,10 +9,11 @@ vector<Intersection> intersections;
 int main() {
     readInput(simulation, streets, cars, intersections);
 
-    //simulatedAnnealing(cars, intersections, simulation.duration, 10000);
-    hillClimbing(cars, intersections, simulation.duration, 10);
+    vector<pair<Street*, int>> result = simulatedAnnealing(cars, intersections, simulation.duration, 10000);
+    //vector<pair<Street*, int>> result = hillClimbing(cars, intersections, simulation.duration, 10);
+    getBestResult(result);
 
-    //writeOutput(intersections);
+    writeOutput(intersections);
 
     return 0;
 }

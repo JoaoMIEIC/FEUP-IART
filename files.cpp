@@ -1,7 +1,7 @@
 #include "graph.h"
 
 void readInput(Simulation &simulation, vector<Street> &streets, vector<Car> &cars, vector<Intersection> &intersections) {
-    ifstream file("a.txt");
+    ifstream file("input.txt");
     file >> simulation.duration >> simulation.nIntersections >> simulation.nStreets >> simulation.nCars >> simulation.score;
 
     // Creates nIntersections empty intersections
