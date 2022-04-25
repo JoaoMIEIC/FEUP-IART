@@ -38,16 +38,16 @@ class Intersection {
     int currentStreet, timeLeft;
     vector<Street*> trafficSchedule;
 public:
-    string changeLog = "";
     void addStreet(Street* s);
     void setTimeLeft(int timeLeft);
     vector<Street*> getTrafficSchedule() const;
     void moveCar();
 
     void changeSchedules(int funcType);
-    void changeStreetSchedule(int streetIndex, int duration);
+    int changeStreetSchedule(int streetIndex, int duration);
     void shuffleOrder();
     void clearStreets();
+    void setCurrentStreet(int index);
 };
 
 class Car {

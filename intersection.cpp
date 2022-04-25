@@ -26,6 +26,12 @@ vector<Street*> Intersection::getTrafficSchedule() const{
 void Intersection::clearStreets(){
     for (int i = 0; i < trafficSchedule.size(); i++)
         trafficSchedule[i]->clearQueue();
+    currentStreet = 0;
+    timeLeft = trafficSchedule[currentStreet]->getDuration();
+}
+
+void Intersection::setCurrentStreet(int index) {
+    currentStreet = index;
 }
 
 void Intersection::changeSchedules(int funcType){
@@ -45,7 +51,9 @@ void Intersection::shuffleOrder() {
     shuffle(trafficSchedule.begin(), trafficSchedule.end(), std::mt19937(std::random_device()()));
 }
 
-void Intersection::changeStreetSchedule(int streetIndex, int duration){
+int Intersection::changeStreetSchedule(int streetIndex, int duration){
+    int oldDuration = trafficSchedule[streetIndex]->getDuration();
     trafficSchedule[streetIndex]->setDuration(duration);
-    changeLog += "Street " + to_string(streetIndex) + " set to " + to_string(duration) + " \n";
+    if (streetIndex == 0) timeLeft = duration;
+    return oldDuration;
 }
